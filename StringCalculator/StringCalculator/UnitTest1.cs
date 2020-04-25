@@ -39,9 +39,9 @@ namespace StringCalculator {
     }
 
     public class Calculator {
-        public int Add(string numbersToSumSeparatedWithCommas) {
-            if (HasNoNumbersToSum(numbersToSumSeparatedWithCommas)) return 0;
-            var numbersToSum = GetNumbersToSumFrom(numbersToSumSeparatedWithCommas);
+        public int Add(string valuesToSumSeparatedWithCommas) {
+            if (HasNoValuesToSum(valuesToSumSeparatedWithCommas)) return 0;
+            var numbersToSum = GetValuesToSumFrom(valuesToSumSeparatedWithCommas);
             if (HasOneNumber(numbersToSum)) return ConvertToNumber(numbersToSum[0]);
             return ConvertToNumber(numbersToSum[0]) + ConvertToNumber(numbersToSum[1]);
         }
@@ -50,7 +50,7 @@ namespace StringCalculator {
             return int.Parse(numbersToSum);
         }
 
-        private static bool HasNoNumbersToSum(string numbersToSumSeparatedWithCommas) {
+        private static bool HasNoValuesToSum(string numbersToSumSeparatedWithCommas) {
             return numbersToSumSeparatedWithCommas == "";
         }
 
@@ -58,7 +58,7 @@ namespace StringCalculator {
             return numbersToSum.Length == 1;
         }
 
-        private static string[] GetNumbersToSumFrom(string numbersToSumSeparatedWithCommas) {
+        private static string[] GetValuesToSumFrom(string numbersToSumSeparatedWithCommas) {
             return numbersToSumSeparatedWithCommas.Split(',');
         }
     }
