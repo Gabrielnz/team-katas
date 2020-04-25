@@ -39,11 +39,27 @@ namespace StringCalculator {
     }
 
     public class Calculator {
-        public int Add(string numbers) {
-            if (numbers == "") return 0;
-            var numberCollection = numbers.Split(',');
-            if (numberCollection.Length == 1) return int.Parse(numberCollection[0]);
-            return int.Parse(numberCollection[0]) + int.Parse(numberCollection[1]);
+        public int Add(string numbersToSumSeparatedWithCommas) {
+            if (HasNoNumbersToSum(numbersToSumSeparatedWithCommas)) return 0;
+            var numbersToSum = GetNumbersToSumFrom(numbersToSumSeparatedWithCommas);
+            if (HasOneNumber(numbersToSum)) return ConvertToNumber(numbersToSum[0]);
+            return ConvertToNumber(numbersToSum[0]) + ConvertToNumber(numbersToSum[1]);
+        }
+
+        private static int ConvertToNumber(string numbersToSum) {
+            return int.Parse(numbersToSum);
+        }
+
+        private static bool HasNoNumbersToSum(string numbersToSumSeparatedWithCommas) {
+            return numbersToSumSeparatedWithCommas == "";
+        }
+
+        private static bool HasOneNumber(string[] numbersToSum) {
+            return numbersToSum.Length == 1;
+        }
+
+        private static string[] GetNumbersToSumFrom(string numbersToSumSeparatedWithCommas) {
+            return numbersToSumSeparatedWithCommas.Split(',');
         }
     }
 }
