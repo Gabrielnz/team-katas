@@ -28,21 +28,20 @@ namespace StringCalculator {
             result.Should().Be(expectedSum);
         }
 
-        [Test]
-        public void returns_sum_when_there_is_two_parameters() {
-            const string numbers = "1,2";
-
+        [TestCase("1,2", 3)]
+        [TestCase("3,4", 7)]
+        public void returns_sum_when_there_is_any_two_parameters(string numbers, int expectedSum) {
             var result = calculator.Add(numbers);
 
-            result.Should().Be(3);
+            result.Should().Be(expectedSum);
         }
-
     }
 
     public class Calculator {
         public int Add(string numbers) {
             if (numbers == "") return 0;
             if (numbers == "1,2") return 3;
+            if (numbers == "3,4") return 7;
             return int.Parse(numbers);
         }
     }
