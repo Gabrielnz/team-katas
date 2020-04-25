@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -41,20 +43,20 @@ namespace StringCalculator {
     public class Calculator {
         public int Add(string valuesToSumSeparatedWithCommas) {
             if (HasNoValuesToSum(valuesToSumSeparatedWithCommas)) return 0;
-            var numbersToSum = GetValuesToSumFrom(valuesToSumSeparatedWithCommas);
-            if (HasOneNumber(numbersToSum)) return ConvertToNumber(numbersToSum[0]);
-            return ConvertToNumber(numbersToSum[0]) + ConvertToNumber(numbersToSum[1]);
+            var numbersToSum = ConvertValuesToNumbers(GetValuesToSumFrom(valuesToSumSeparatedWithCommas));
+            if (HasOneNumber(numbersToSum)) return numbersToSum[0];
+            return numbersToSum[0] + numbersToSum[1];
         }
 
-        private static int ConvertToNumber(string numbersToSum) {
-            return int.Parse(numbersToSum);
+        private int[] ConvertValuesToNumbers(string[] valuesToSum) {
+            return valuesToSum.Select(valueToSum => int.Parse(valueToSum)).ToArray();
         }
 
         private static bool HasNoValuesToSum(string numbersToSumSeparatedWithCommas) {
             return numbersToSumSeparatedWithCommas == "";
         }
 
-        private static bool HasOneNumber(string[] numbersToSum) {
+        private static bool HasOneNumber(int[] numbersToSum) {
             return numbersToSum.Length == 1;
         }
 
