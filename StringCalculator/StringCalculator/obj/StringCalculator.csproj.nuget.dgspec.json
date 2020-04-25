@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\personal\\team-katas\\StringCalculator\\StringCalculator\\StringCalculator.csproj": {}
+    "C:\\Users\\luis.figueradorta\\Desktop\\kata\\team-katas\\StringCalculator\\StringCalculator\\StringCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Code\\personal\\team-katas\\StringCalculator\\StringCalculator\\StringCalculator.csproj": {
+    "C:\\Users\\luis.figueradorta\\Desktop\\kata\\team-katas\\StringCalculator\\StringCalculator\\StringCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\personal\\team-katas\\StringCalculator\\StringCalculator\\StringCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\luis.figueradorta\\Desktop\\kata\\team-katas\\StringCalculator\\StringCalculator\\StringCalculator.csproj",
         "projectName": "StringCalculator",
-        "projectPath": "C:\\Code\\personal\\team-katas\\StringCalculator\\StringCalculator\\StringCalculator.csproj",
-        "packagesPath": "C:\\Users\\gnunez\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\personal\\team-katas\\StringCalculator\\StringCalculator\\obj\\",
+        "projectPath": "C:\\Users\\luis.figueradorta\\Desktop\\kata\\team-katas\\StringCalculator\\StringCalculator\\StringCalculator.csproj",
+        "packagesPath": "C:\\Users\\luis.figueradorta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luis.figueradorta\\Desktop\\kata\\team-katas\\StringCalculator\\StringCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gnunez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\luis.figueradorta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
