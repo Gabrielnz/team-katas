@@ -34,7 +34,7 @@ namespace StringCalculator {
         public int Sum(string numbers) {
             if (numbers == "") return 0;
             if (numbers == "8") return 8;
-            return 0;
+            return default(int);
         }
     }
 }
