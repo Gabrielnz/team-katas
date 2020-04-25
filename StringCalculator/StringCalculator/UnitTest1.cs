@@ -11,7 +11,7 @@ namespace StringCalculator {
         }
 
         [Test]
-        public void ReturnsZeroWhenThereAreNoNumbers() {
+        public void returns_zero_when_there_are_no_numbers() {
             const string numbers = "";
 
             var result = calculator.Sum(numbers);
