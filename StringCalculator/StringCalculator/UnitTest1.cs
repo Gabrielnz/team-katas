@@ -14,14 +14,14 @@ namespace StringCalculator {
         public void returns_zero_when_there_are_no_numbers() {
             const string numbers = "";
 
-            var result = calculator.Sum(numbers);
+            var result = Calculator.Sum(numbers);
 
             result.Should().Be(0);
         }
     }
 
-    class Calculator {
-        public int Sum(string numbers) {
+    public class Calculator {
+        public static int Sum(string numbers) {
             return 0;
         }
     }
