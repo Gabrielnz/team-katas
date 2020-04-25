@@ -30,6 +30,7 @@ namespace StringCalculator {
 
         [TestCase("1,2", 3)]
         [TestCase("3,4", 7)]
+        [TestCase("5,6", 11)]
         public void returns_sum_when_there_is_any_two_parameters(string numbers, int expectedSum) {
             var result = calculator.Add(numbers);
 
@@ -40,9 +41,9 @@ namespace StringCalculator {
     public class Calculator {
         public int Add(string numbers) {
             if (numbers == "") return 0;
-            if (numbers == "1,2") return 3;
-            if (numbers == "3,4") return 7;
-            return int.Parse(numbers);
+            var numberCollection = numbers.Split(',');
+            if (numberCollection.Length == 1) return int.Parse(numberCollection[0]);
+            return int.Parse(numberCollection[0]) + int.Parse(numberCollection[1]);
         }
     }
 }
